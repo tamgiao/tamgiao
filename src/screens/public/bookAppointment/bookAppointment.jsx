@@ -79,12 +79,12 @@ const BookAppointment = () => {
     const onSubmit = async () => {
         try {
             const formData = new FormData();
-            formData.append("userId", user._id);
+            formData.append("patientId", user._id);
             formData.append("psychologistId", psychologistId);
             formData.append("scheduleId", scheduleId);
             formData.append("symptoms", symptoms);
 
-            console.log(formData.get("userId")); // Should log user._id
+            console.log(formData.get("patientId")); // Should log user._id
             console.log(formData.get("psychologistId")); // Should log psychologistId
             console.log(formData.get("scheduleId")); // Should log scheduleId
             console.log(formData.get("symptoms")); // Should log symptoms

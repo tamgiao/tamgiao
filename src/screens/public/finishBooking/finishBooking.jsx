@@ -35,6 +35,7 @@ const BookingSuccess = () => {
         if (appointmentId) {
             API.getAppointmentById(appointmentId)
                 .then((response) => {
+                    console.log(response.data);
                     setAppointmentDetails(response.data); // Store the fetched appointment data in state
                 })
                 .catch((error) => {
