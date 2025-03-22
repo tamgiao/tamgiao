@@ -133,11 +133,19 @@ export const cancelPayment = async (credentials) => {
 };
 
 export const getAppointmentListByUserId = async (id) => {
-    return await apiClient.get(`/appointment/appointments/${id}`);
+    return await apiClient.get(`/appointment/appointment-list/${id}`);
 };
 
 export const countPendingAppointment = async (credentials) => {
     return await apiClient.post("/appointment/count-pending-appointment", credentials);
+};
+
+export const getUserAppointmentById = async (credentials) => {
+    return await apiClient.post("/appointment/appointment-details", credentials);
+};
+
+export const getZoomMeetURL = async (credentials) => {
+    return await apiClient.post("/appointment/get-zoom-url", credentials);
 };
 
 export default appointmentApi;
