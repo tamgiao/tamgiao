@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { useParams, useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
@@ -154,11 +155,13 @@ const BlogPostDetail = () => {
                     {/* Advertisement Space - Top */}
                     <Card className="p-4 mb-6 bg-yellow-50 border-yellow-200">
                         <div className="w-full aspect-[1/2] overflow-hidden rounded-md bg-gray-200">
-                            <img
-                                src="https://i.imgur.com/6K15bgv.png"
-                                alt="Advertisement"
-                                className="w-full h-full object-cover"
-                            />
+                            <Link to="https://www.facebook.com/yogamastertaybac">
+                                <img
+                                    src="https://i.imgur.com/6K15bgv.png"
+                                    alt="Advertisement"
+                                    className="w-full h-full object-cover"
+                                />
+                            </Link>
                         </div>
                         <p className="text-xs text-gray-500 text-center mt-2">Quảng cáo được trả phí</p>
                     </Card>
