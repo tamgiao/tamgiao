@@ -11,7 +11,7 @@ const PromoCarousel = () => {
             try {
                 const response = await API.getAllBlogPosts();
                 // Filter blogs that have "ads" in the tag array
-                const filteredArticles = response.data.filter((blog) => blog.tag && blog.tag.includes("ads"));
+                const filteredArticles = response.data.filter((blog) => blog.tags && blog.tags.includes("ads"));
                 setArticles(filteredArticles.slice(0, 3)); // Get only the top 3 filtered blogs
             } catch (err) {
                 console.error(err);
