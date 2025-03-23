@@ -16,7 +16,7 @@ const StatsSection = () => {
             icon: <Building2 className="w-12 h-12" />,
         },
         {
-            value: "20",
+            value: "48",
             label: "Khách hàng",
             subLabel: "Đã hỗ trợ",
             icon: <HeartPulse className="w-12 h-12" />,
